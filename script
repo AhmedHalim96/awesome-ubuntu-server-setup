@@ -1,0 +1,117 @@
+#!/bin/sh
+
+# Let's make ubuntu great again 
+
+## Updating the system
+
+sudo apt update
+sudo apt upgrade
+
+#
+## remove snaps ew!
+
+sudo snap remove $(snap list | awk '!/^Name|^core/ {print $1}')
+sudo apt remove --purge -y snapd gnome-software-plugin-snap
+sudo rm -rf /var/cache/snapd/
+rm -fr ~/snap
+cd /etc/apt/preferences.d/
+sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
+
+#
+## installing esstinaial apps
+
+sudo apt install lightdm terminator git awesome blueberry nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugns mpd mpdris2 ncmpcpp autojump fzf flameshot -y
+
+### removing gnome shell
+sudo apt remove gnome-shell -y
+
+### cleaning up 
+sudo apt autoclean -y && sudo apt autoremove -y
+
+#
+## installing 3rd party apps
+mkdir $HOME/scriptcache
+cd $HOME/scriptcache
+
+## lf
+wget https://github.com/gokcehan/lf/releases/download/r27/lf-linux-amd64.tar.gz
+tar xzf lf-linux-amd64.tar.gz 
+mv lf $HOME/.local/bin
+
+### codium
+
+#### add the key
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+#### adding the repo
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+### node
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+### albert
+curl "https://build.opensuse.org/projects/home:manuelschneid3r/public_key" | sudo apt-key add -
+
+### copyq
+sudo add-apt-repository ppa:hluk/copyq
+
+### qbittorrent
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+
+### xdman
+# Manual for now
+
+### cryptomator
+sudo add-apt-repository ppa:sebastian-stenzel/cryptomator
+
+### breaktimer
+wget https://github.com/tom-james-watson/breaktimer-app/releases/download/v0.9.0/BreakTimer.deb
+
+apt install ./BreakTimer.deb -y
+
+### smplayer
+sudo add-apt-repository ppa:rvm/smplayer 
+
+### brave
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+
+### installing all that and praying to god nothing bad happens 
+sudo apt update
+sudo apt install codium nodejs albert copyq qbittorrent smplayer=21.10.0-1~ubuntu-focal brave-browser  -y
+
+#
+## Build from source 
+
+### xbanish
+
+### picom
+
+### yt-dlp
+
+#
+## Adding some settings 
+
+### switching to zsh
+
+#
+## Theming
+
+### papirus icons
+
+### fonts noto sans and fire code
+
+### sweet theme 
+
+#
+## Cloning my dot config files
+git clone  --bare  https://github.com/AhmedHalim96/dotfiles $HOME/.cfg 
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME" 
+dotfiles checkout master
+dotfiles submodule update --init --recursive -j 3 
+dotfiles config --local status.showUntrackedFiles no
