@@ -56,24 +56,24 @@ curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 curl "https://build.opensuse.org/projects/home:manuelschneid3r/public_key" | sudo apt-key add -
 
 ### copyq
-sudo add-apt-repository ppa:hluk/copyq
+sudo add-apt-repository ppa:hluk/copyq -y
 
 ### qbittorrent
-sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y
 
 ### xdman
 # Manual for now
 
 ### cryptomator
-sudo add-apt-repository ppa:sebastian-stenzel/cryptomator
+sudo add-apt-repository ppa:sebastian-stenzel/cryptomator -y
 
 ### breaktimer
 wget https://github.com/tom-james-watson/breaktimer-app/releases/download/v0.9.0/BreakTimer.deb
 
-apt install ./BreakTimer.deb -y
+sudo apt install ./BreakTimer.deb -y
 
 ### smplayer
-sudo add-apt-repository ppa:rvm/smplayer 
+sudo add-apt-repository ppa:rvm/smplayer -y 
 
 ### brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
