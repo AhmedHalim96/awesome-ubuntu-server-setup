@@ -94,6 +94,11 @@ sudo apt install codium nodejs albert copyq qbittorrent smplayer smtube smplayer
 ### picom
 
 ### yt-dlp
+wget https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2022.06.29.tar.gz
+tar xzf 2022.06.29.tar.gz
+cd yt-dlp-2022.06.29
+sudo make install DESTDIR=/
+cd $HOME/scriptcache
 
 #
 ## Adding some settings 
