@@ -114,7 +114,11 @@ sudo make install DESTDIR=/
 cd $HOME/scriptcache
 
 ### Dmenu
-
+git clone https://github.com/AhmedHalim96/dmenu
+make
+sudo make install
+make clean
+https://github.com/AhmedHalim96/dmenu
 
 #
 ## Adding some settings 
