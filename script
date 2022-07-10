@@ -85,9 +85,12 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 curl -sS https://starship.rs/install.sh | sh
 
 
+### papirus icons
+sudo add-apt-repository ppa:papirus/papirus
+
 ### installing all that and praying to god nothing bad happens 
 sudo apt update
-sudo apt install codium nodejs albert copyq qbittorrent smplayer smtube smplayer-themes smplayer-skins brave-browser  -y
+sudo apt install codium nodejs albert copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser  -y
 
 #
 ## Build from source 
@@ -128,6 +131,7 @@ https://github.com/AhmedHalim96/dmenu
 ## Adding some settings 
 
 ### switching to zsh
+sudo chsh -s /bin/zsh
 
 ### auto mount the hdd
 
@@ -135,11 +139,17 @@ https://github.com/AhmedHalim96/dmenu
 ## Theming
 
 ### papirus icons
+## do it through lxappearance & qt5ct 
 
 ### fonts noto sans and fire code
 ## do it through typecatcher for now
 
 ### sweet theme 
+cd ~/.themes
+wget https://github.com/EliverLara/Sweet/releases/download/v3.0/Sweet-Dark.zip
+unzip Sweet-Dark.zip
+cd $HOME/scriptcache
+# set it using lxappearance
 
 #
 ## Cloning my dot config files
