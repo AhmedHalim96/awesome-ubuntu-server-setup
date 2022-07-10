@@ -86,10 +86,10 @@ curl -sS https://starship.rs/install.sh | sh
 
 
 ### papirus icons
-sudo add-apt-repository ppa:papirus/papirus
+sudo add-apt-repository ppa:papirus/papirus -y
 
 ### neovim
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/stable -y
 
 ### installing all that and praying to god nothing bad happens 
 sudo apt update
