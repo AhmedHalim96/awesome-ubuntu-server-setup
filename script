@@ -20,7 +20,7 @@ sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
 #
 ## installing esstinaial apps
 
-sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot -y
+sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher -y
 
 ### removing gnome shell
 sudo apt remove gnome-shell -y
@@ -81,6 +81,9 @@ sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://b
 
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
+### starship
+curl -sS https://starship.rs/install.sh | sh
+
 
 ### installing all that and praying to god nothing bad happens 
 sudo apt update
@@ -120,10 +123,13 @@ sudo make install
 make clean
 https://github.com/AhmedHalim96/dmenu
 
+
 #
 ## Adding some settings 
 
 ### switching to zsh
+
+### auto mount the hdd
 
 #
 ## Theming
@@ -131,6 +137,7 @@ https://github.com/AhmedHalim96/dmenu
 ### papirus icons
 
 ### fonts noto sans and fire code
+## do it through typecatcher for now
 
 ### sweet theme 
 
