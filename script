@@ -129,6 +129,10 @@ sudo make install
 make clean
 https://github.com/AhmedHalim96/dmenu
 
+## installing some python packages
+pip install gallery-dl ueberzug
+
+
 
 #
 ## Adding some settings 
