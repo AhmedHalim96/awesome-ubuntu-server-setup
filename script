@@ -138,7 +138,8 @@ pip install gallery-dl ueberzug thefuck
 ## Adding some settings 
 
 ### switching to zsh
-sudo chsh -s /bin/zsh
+sudo chsh $USER # and then enter /bin/zsh
+
 
 ### auto mount the hdd
 #### do it through gnomedisks 
