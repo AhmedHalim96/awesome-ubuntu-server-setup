@@ -20,7 +20,7 @@ sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
 #
 ## installing esstinaia packages 
 
-sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher gnome-disk-utility gcc python3-dev python3-pip python3-setuptools tor pandoc zsh-syntax-highlighting zsh-autosuggestions apt-file libx11-dev libxinerama-dev -y
+sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher gnome-disk-utility gcc python3-dev python3-pip python3-setuptools tor pandoc zsh-syntax-highlighting zsh-autosuggestions apt-file libx11-dev libxinerama-dev libxft-dev -y
 
 ### removing gnome shell
 sudo apt remove gnome-shell -y
