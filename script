@@ -20,7 +20,7 @@ sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
 #
 ## installing esstinaial apps
 
-sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher gnome-disks -y
+sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher gnome-disks gcc -y
 
 ### removing gnome shell
 sudo apt remove gnome-shell -y
