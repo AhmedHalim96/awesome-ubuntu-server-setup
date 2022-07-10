@@ -20,7 +20,7 @@ sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
 #
 ## installing esstinaial apps
 
-sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher gnome-disk-utility gcc -y
+sudo apt install lightdm terminator git awesome blueman nemo firefox light xwallpaper mpv aria2 seahorse lxappearance zsh qt5ct qt5-style-plugins mpd mpdris2 ncmpcpp autojump fzf flameshot typecatcher gnome-disk-utility gcc python3-dev python3-pip python3-setuptools -y
 
 ### removing gnome shell
 sudo apt remove gnome-shell -y
@@ -130,7 +130,7 @@ make clean
 https://github.com/AhmedHalim96/dmenu
 
 ## installing some python packages
-pip install gallery-dl ueberzug
+pip install gallery-dl ueberzug thefuck
 
 
 
