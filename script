@@ -162,6 +162,7 @@ rm FiraCode.zip
 cd $HOME/scriptcache
 
 ### sweet theme 
+mkdir ~/.themes
 cd ~/.themes
 wget https://github.com/EliverLara/Sweet/releases/download/v3.0/Sweet-Dark.zip
 unzip Sweet-Dark.zip
