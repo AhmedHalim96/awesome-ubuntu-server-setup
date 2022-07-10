@@ -90,6 +90,11 @@ sudo apt install codium nodejs albert copyq qbittorrent smplayer smtube smplayer
 ## Build from source 
 
 ### xbanish
+wget https://github.com/jcs/xbanish/archive/refs/tags/v1.8.tar.gz
+tar xzf v1.8.tar.gz
+cd xbanish-1.8
+sudo make install
+cd $HOME/scriptcache
 
 ### picom
 wget https://github.com/yshui/picom/archive/refs/tags/v9.1.tar.gz
@@ -99,6 +104,7 @@ sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev l
 meson --buildtype=release . build
 ninja -C build
 sudo ninja -C build install 
+cd $HOME/scriptcache
 
 ### yt-dlp
 wget https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2022.06.29.tar.gz
@@ -106,6 +112,9 @@ tar xzf 2022.06.29.tar.gz
 cd yt-dlp-2022.06.29
 sudo make install DESTDIR=/
 cd $HOME/scriptcache
+
+### Dmenu
+
 
 #
 ## Adding some settings 
