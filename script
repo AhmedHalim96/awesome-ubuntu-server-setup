@@ -183,8 +183,8 @@ cd $HOME/scriptcache
 
 #
 ## Cloning my dot config files
-git clone  --bare  https://github.com/AhmedHalim96/dotfiles $HOME/.cfg 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME" 
+git clone  --bare  https://github.com/AhmedHalim96/dotfiles $HOME/.dotfiles
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" 
 dotfiles checkout -f master 
 dotfiles submodule update --init --recursive -j 3 
 dotfiles config --local status.showUntrackedFiles no
