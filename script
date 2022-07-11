@@ -91,9 +91,15 @@ sudo add-apt-repository ppa:papirus/papirus -y
 ### neovim
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 
+### gh
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+
 ### installing all that and praying to god nothing bad happens 
 sudo apt update
-sudo apt install codium nodejs albert copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser neovim  -y
+sudo apt install codium nodejs albert copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser neovim gh  -y
 
 #
 ## Build from source 
@@ -136,8 +142,7 @@ cd auto-cpufreq && sudo ./auto-cpufreq-installer
 sudo auto-cpufreq-install
 cd $HOME/scriptcache
 
-## installing some python packages
-pip install gallery-dl ueberzug thefuck
+## installing some python packages pip install gallery-dl ueberzug thefuck
 
 #
 ## Adding some settings 
