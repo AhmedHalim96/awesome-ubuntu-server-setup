@@ -128,11 +128,16 @@ make
 sudo make install
 make clean
 https://github.com/AhmedHalim96/dmenu
+cd $HOME/scriptcache
+
+### auto cpu frequency  
+git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+cd auto-cpufreq && sudo ./auto-cpufreq-installer
+sudo auto-cpufreq-install
+cd $HOME/scriptcache
 
 ## installing some python packages
 pip install gallery-dl ueberzug thefuck
-
-
 
 #
 ## Adding some settings 
@@ -177,3 +182,5 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 dotfiles checkout -f master 
 dotfiles submodule update --init --recursive -j 3 
 dotfiles config --local status.showUntrackedFiles no
+
+rm -rf ~/scriptcache
