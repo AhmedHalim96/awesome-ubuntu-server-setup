@@ -1,0 +1,23 @@
+#!/bin/sh
+## Updating the system
+
+sudo apt update
+sudo apt upgrade -y
+
+# removing cloud-init
+sudo dpkg-reconfigure cloud-init
+sudo dpkg-reconfigure cloud-init
+sudo apt-get purge cloud-init
+sudo rm -rf /etc/cloud/ && sudo rm -rf /var/lib/cloud/
+
+#
+## remove snaps ew!
+
+sudo snap remove $(snap list | awk '!/^Name|^core/ {print $1}')
+sudo apt remove --purge -y snapd gnome-software-plugin-snap
+sudo rm -rf /var/cache/snapd/
+rm -fr ~/snap
+cd /etc/apt/preferences.d/
+sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
+
+reboot
