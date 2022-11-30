@@ -1,0 +1,7 @@
+#!/bin/sh
+
+### switching to zsh
+sudo chsh $USER # and then enter /bin/zsh
+
+## clean up
+sufo rm -rf ~/scriptcache

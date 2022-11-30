@@ -1,0 +1,9 @@
+#!/bin/sh
+
+### yt-dlp
+cd $HOME/scriptcache
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz
+tar xzf yt-dlp.tar.gz
+cd yt-dlp
+sudo make install DESTDIR=/
+make clean

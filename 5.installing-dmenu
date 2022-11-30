@@ -1,0 +1,7 @@
+#!/bin/sh
+
+### Dmenu
+cd $HOME/scriptcache
+git clone https://github.com/AhmedHalim96/dmenu
+make
+sudo make install

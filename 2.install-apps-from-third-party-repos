@@ -1,0 +1,54 @@
+#!/bin/sh
+
+### codium
+
+#### add the key
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+#### adding the repo
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+### node
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+### albert
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg > /dev/null
+
+### copyq
+sudo add-apt-repository ppa:hluk/copyq -y
+
+### qbittorrent
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y
+
+### cryptomator
+sudo add-apt-repository ppa:sebastian-stenzel/cryptomator -y
+
+
+### smplayer
+sudo add-apt-repository ppa:rvm/smplayer -y 
+
+### brave
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+### papirus icons
+sudo add-apt-repository ppa:papirus/papirus -y
+
+### neovim
+sudo add-apt-repository ppa:neovim-ppa/stable -y
+
+### gh
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+
+### installing all that and praying to god nothing bad happens 
+sudo nala update
+sudo nala install codium nodejs albert copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser neovim gh  -y
+

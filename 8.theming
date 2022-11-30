@@ -1,0 +1,20 @@
+#!/bin/sh
+## Theming
+
+### papirus icons
+## do it through lxappearance & qt5ct 
+
+### fonts noto sans and fira code
+cd ~/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+unzip FiraCode.zip
+rm FiraCode.zip
+cd $HOME/scriptcache
+
+### sweet theme 
+mkdir ~/.themes
+cd ~/.themes
+wget https://github.com/EliverLara/Sweet/releases/download/v3.0/Sweet-Dark.zip
+unzip Sweet-Dark.zip
+rm Sweet-Dark.zip
+cd $HOME/scriptcache
