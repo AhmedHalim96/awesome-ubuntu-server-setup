@@ -24,5 +24,5 @@ cd xbanish-1.8
 sudo make install
 
 ## installing some python packages 
-pip install gallery-dl ueberzug thefuck udiskie
+pip install gallery-dl thefuck udiskie ## no ueberzug 
 

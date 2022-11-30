@@ -3,5 +3,6 @@
 ### Dmenu
 cd $HOME/scriptcache
 git clone https://github.com/AhmedHalim96/dmenu
+cd demnu
 make
 sudo make install
