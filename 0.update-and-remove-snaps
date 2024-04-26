@@ -19,4 +19,7 @@ rm -fr ~/snap
 cd /etc/apt/preferences.d/
 sudo wget https://bit.ly/2XAEFEM --output-document=nosnap.pref
 
+## disable cloud init 
+sudo mkdir /etc/cloud
+sudo touch /etc/cloud/cloud-init.disabled
 reboot
