@@ -9,3 +9,5 @@ sudo nala install sddm terminator git awesome blueman nemo light xwallpaper mpv 
 ### cleaning up 
 sudo apt autoclean -y && sudo apt autoremove -y
 
+### reboot
+reboot
