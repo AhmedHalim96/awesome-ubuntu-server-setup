@@ -11,13 +11,6 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
 echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main' \
     | sudo tee /etc/apt/sources.list.d/vscodium.list
 
-### node
-curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-### albert
-echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_manuelschneid3r.gpg > /dev/null
-
 ### copyq
 sudo add-apt-repository ppa:hluk/copyq -y
 
@@ -50,5 +43,5 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 
 ### installing all that and praying to god nothing bad happens 
 sudo nala update
-sudo nala install codium nodejs albert copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser neovim gh  -y
+sudo nala install codium copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser neovim gh  -y
 
