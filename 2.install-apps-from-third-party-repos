@@ -43,5 +43,5 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 
 ### installing all that and praying to god nothing bad happens 
 sudo nala update
-sudo nala install codium copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes smplayer-skins brave-browser neovim gh  -y
+sudo nala install codium copyq qbittorrent papirus-icon-theme smplayer smtube smplayer-themes brave-browser neovim gh  -y
 
