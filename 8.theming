@@ -5,7 +5,8 @@
 ## do it through lxappearance & qt5ct 
 
 ### fonts noto sans and fira code
-mkdir ~/.fonts && cd ~/.fonts
+mkdir ~/.fonts 
+cd ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip
 rm FiraCode.zip
