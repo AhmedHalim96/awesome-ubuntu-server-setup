@@ -23,6 +23,10 @@ tar xzf v1.8.tar.gz
 cd xbanish-1.8
 sudo make install
 
+## creating python environment
+python3 -m venv .venv
+source .venv/bin/activate
+
 ## installing some python packages 
-pip install gallery-dl thefuck udiskie ## no ueberzug 
+pip install gallery-dl udiskie ## no ueberzug, thefuck
 
